@@ -1,0 +1,33 @@
+{
+  "name": "b-morris",
+  "version": "0.0.1",
+  "description": "Personal webpage",
+  "main": "src/app.jsx",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brimix/b-morris.git"
+  },
+  "author": "Brian Morris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brimix/b-morris/issues"
+  },
+  "homepage": "https://github.com/Brimix/b-morris#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1",
+    
+    "@babel/core": "^7.21.3",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^9.1.2",
+    "babel-polyfill": "^6.26.0",
+    "html-webpack-plugin": "^5.5.3",
+    "webpack-dev-server": "^4.12.0"
+  }
+}
