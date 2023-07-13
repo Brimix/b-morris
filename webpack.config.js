@@ -31,7 +31,15 @@ module.exports = {
       {
         test: /\.(js|jsx|ts|tsx)$/,
         use: ['babel-loader'],
-      }
+      },
+      {
+        test: /\.(scss)$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(jpe?g)$/,
+        use: ['file-loader'],
+      },
     ]
   },
   plugins: [

@@ -1,0 +1,11 @@
+.footer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  &__text {
+    vertical-align: middle;
+    text-align: center;
+  }
+}
