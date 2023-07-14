@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="footer__text">
-        Copyright (c) Brian Morris 2023
+        Copyright © Brian Morris 2023
       </div>
     </div>
   )

@@ -5,6 +5,11 @@ html, body, #root {
   width: 100%;
 }
 
+@font-face {
+  font-family: hilo-deco;
+  src: url("../../font/HiLo-Deco.ttf");
+}
+
 .main-page {
   height: 100%;
   display: flex;
@@ -27,6 +32,11 @@ html, body, #root {
     vertical-align: middle;
     justify-content: space-around;
     text-align: center;
+
+    * {
+      font-family: hilo-deco;
+      font-size: 40;
+    }
   }
 
   &__footer {

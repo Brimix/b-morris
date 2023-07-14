@@ -1,4 +1,12 @@
 .links-brief {
   display: flex;
   flex-direction: column;
+
+  * {
+    font-size: 30px;
+  }
+
+  > div > label {
+    margin-right: 10px;
+  }
 }
