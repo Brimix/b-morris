@@ -1,4 +1,5 @@
 import Footer from './Footer';
+import LinksBrief from './LinksBrief';
 import creatorProfileImage from '../../img/20210705_171351.jpg';
 import './App.scss';
 
@@ -8,7 +9,7 @@ const App = () => {
         <div className="main-page__body">
           <img src={creatorProfileImage} alt="Pibe fachero" />
           <div className="main-page__content">
-            Site in development...
+            <LinksBrief/>
           </div>
         </div>
         <div className="main-page__footer">
