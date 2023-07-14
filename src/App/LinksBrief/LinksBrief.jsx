@@ -1,12 +1,9 @@
+import resumeePdf from '../../../files/Resume_Brian_Morris_Esquivel.pdf';
 import './LinksBrief.scss';
 
 const LinksBrief = () => {
   const onGithubClick = () => {
-    window.location.href = "https://github.com/Brimix";
-  }
-
-  const onResumeClick = () => {
-    console.log('Not yet implemented! Lol');
+    window.open("https://github.com/Brimix", "_blank");
   }
 
   return (
@@ -18,7 +15,9 @@ const LinksBrief = () => {
       </div>
       <div>
         Download my resume
-        <button onClick={onResumeClick}> Resume </button>
+        <a href={resumeePdf} Download="Resume - Brian Morris">
+          <button type = "button"> Download </button>
+        </a>
       </div>
     </div>
   );
