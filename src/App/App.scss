@@ -61,6 +61,9 @@ html, body, #root {
       font-family: hilo-deco;
       font-size: 40;
     }
+    @include narrow-window() {
+      z-index: 1;
+    }
   }
 
   &__footer {
