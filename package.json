@@ -4,6 +4,7 @@
   "description": "Personal webpage",
   "main": "src/app.jsx",
   "scripts": {
+    "build": "webpack",
     "start": "webpack-dev-server",
     "test": "test"
   },
