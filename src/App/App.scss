@@ -10,6 +10,12 @@ html, body, #root {
   src: url("../../font/HiLo-Deco.ttf");
 }
 
+@mixin narrow-window() {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
 .main-page {
   height: 100%;
   display: flex;
@@ -20,8 +26,26 @@ html, body, #root {
     height: calc(100% - 30px);
     display: flex;
     flex-direction: row;
+  }
+
+  &__picture {
     img {
+      width: unset;
       height: 100%;
+    }
+
+    @include narrow-window() {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      opacity: 20%;
+      img {
+        max-width: 100%;
+        max-height: calc(100vh - 30px);
+        object-fit: scale-down;
+      }
     }
   }
 

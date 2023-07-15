@@ -7,7 +7,9 @@ const App = () => {
   return (
     <div className="main-page">
         <div className="main-page__body">
-          <img src={creatorProfileImage} alt="Pibe fachero" />
+          <div className="main-page__picture">
+            <img src={creatorProfileImage} alt="Pibe fachero" />
+          </div>
           <div className="main-page__content">
             <LinksBrief/>
           </div>
