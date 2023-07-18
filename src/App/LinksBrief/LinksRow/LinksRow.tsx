@@ -1,10 +1,12 @@
 import {useCallback, useMemo} from 'react';
+import {ReactSVG} from 'react-svg';
 import './LinksRow.scss';
 
 import iconShare from '../../../../img/iconmonstr-share-11.svg';
 import iconDownload from '../../../../img/iconmonstr-download-4.svg';
 
 export interface LinksRowProps {
+  color?: string;
   icon: string;
   label: string;
   url: string;
@@ -12,16 +14,16 @@ export interface LinksRowProps {
 };
 
 const LinksRow = (props: LinksRowProps) => {
-  const {icon, label, url, downloadableFilename} = props;
+  const {color = "default", icon, label, url, downloadableFilename} = props;
 
   const isDownloadable = useMemo(() => downloadableFilename !== undefined, [downloadableFilename]);
 
   const onClickOpen = useCallback(() => window.open(url, "_blank"), [url]);
 
   return (
-    <div className="links-row">
-      <div>
-        <img src={icon} alt="icon" />
+    <div className={`links-row links-row-color--${color}`}>
+      <div className="links-row__label">
+        <ReactSVG className="links-row__icon" src={icon}/>
         <label> {label} </label>
       </div>
       <div>
