@@ -37,7 +37,7 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(jpe?g|pdf)$/,
+        test: /\.(jpe?g|svg|pdf)$/,
         use: ['file-loader'],
       },
     ]

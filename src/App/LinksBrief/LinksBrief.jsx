@@ -1,31 +1,22 @@
 import {useCallback} from 'react';
 import resumePdf from '../../../files/Resume_Brian_Morris_Esquivel.pdf';
 import './LinksBrief.scss';
+import LinksRow from './LinksRow/LinksRow';
+
+import iconGithub from '../../../img/iconmonstr-github-1.svg';
+import iconLinkedin from '../../../img/iconmonstr-linkedin-3.svg';
+import iconPdf from '../../../img/iconmonstr-file-34.svg';
 
 const LinksBrief = () => {
-  const onGithubClick = useCallback(() => window.open("https://github.com/Brimix", "_blank"), []);
-
-  const onLinkedinClick = useCallback(() => window.open("https://www.linkedin.com/in/brian-morris-esquivel/", "_blank"), []);
-
-  const onResumeClick = useCallback(() => window.open(resumePdf, "_blank"), []);
-
   return (
     <div className="links-brief">
       <p> Site in development... </p>
-      <div>
-        <label> Check out my work </label>
-        <button onClick={onGithubClick}> Github </button>
-      </div>
-      <div>
-        <label> Stalk me on Linkedin </label>
-        <button onClick={onLinkedinClick}> Linkedin </button>
-      </div>
-      <div>
-        <label> Check my resume! </label>
-        <button onClick={onResumeClick}> Open </button>
-        <a href={resumePdf} Download="Resume - Brian Morris">
-          <button type = "button"> Download </button>
-        </a>
+      <div className="links-brief__wrapper">
+        <div>
+          <LinksRow icon={iconGithub} label="Check out my work" url="https://github.com/Brimix" />
+          <LinksRow icon={iconLinkedin} label="Stalk me on Linkedin" url="https://www.linkedin.com/in/brian-morris-esquivel/" />
+          <LinksRow icon={iconPdf} label="Check my resume!" url={resumePdf} isDownloadable downloadableFilename="Resume - Brian Morris"/>
+        </div>
       </div>
     </div>
   );

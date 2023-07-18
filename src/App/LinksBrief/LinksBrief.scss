@@ -6,7 +6,9 @@
     font-size: 30px;
   }
 
-  > div > * {
-    margin: 10px;
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
