@@ -29,12 +29,7 @@ const LinksBrief = () => {
       <div className="links-brief__wrapper">
         <div>
           {linksData.map((linkData, index) => (
-            <LinksRow
-              key={index}
-              icon={linkData.icon}
-              label={linkData.label}
-              url={linkData.url}
-              downloadableFilename={linkData.downloadableFilename}/>
+            <LinksRow key={index} {...linkData}/>
           ))}
         </div>
       </div>
