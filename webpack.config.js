@@ -5,14 +5,14 @@ const path = require('path');
 const APP_DIST_PATH = path.resolve(__dirname, './dist');
 
 module.exports = {
-  entry: ['babel-polyfill', './src/app'],
+  entry: ['babel-polyfill', './src/app.tsx'],
   output: {
     path: APP_DIST_PATH,
     filename: '[name].js',
   },
   resolve: {
     modules: ['./node_modules'],
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   devServer: {
     static: {
