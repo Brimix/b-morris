@@ -1,22 +1,32 @@
-import {useCallback, useEffect} from 'react';
+import {useCallback} from 'react';
 import './LinksRow.scss';
 
+import iconShare from '../../../../img/iconmonstr-share-11.svg';
+import iconDownload from '../../../../img/iconmonstr-download-4.svg';
+
 const LinksRow = (props) => {
-  const {label, url, isDownloadable = false} = props;
+  const {icon, label, url, isDownloadable = false, downloadableFilename} = props;
 
   const onClickOpen = useCallback(() => window.open(url, "_blank"), [url]);
 
-  useEffect(() => console.log('holi', isDownloadable));
-
   return (
     <div className="links-row">
-      <label> {label} </label>
-      <button onClick={onClickOpen}> Open </button>
-      {isDownloadable && (
-        <a href={url} Download="Resume - Brian Morris">
-          <button type = "button"> Download </button>
-        </a>
-      )}
+      <div>
+        <img src={icon} alt="icon" />
+        <label> {label} </label>
+      </div>
+      <div>
+        <button onClick={onClickOpen}>
+          <img src={iconShare} alt="Share" />
+        </button>
+        {isDownloadable && (
+          <a href={url} Download={downloadableFilename}>
+            <button type = "button">
+              <img src={iconDownload} alt="Share" />
+            </button>
+          </a>
+        )}
+      </div>
     </div>
   )
 };
