@@ -17,12 +17,12 @@ const LinksRow = (props) => {
       </div>
       <div>
         <button onClick={onClickOpen}>
-          <img src={iconShare} alt="Share" />
+          <img src={iconShare} alt="Go" />
         </button>
         {isDownloadable && (
-          <a href={url} Download={downloadableFilename}>
-            <button type = "button">
-              <img src={iconDownload} alt="Share" />
+          <a href={url} download={downloadableFilename}>
+            <button>
+              <img src={iconDownload} alt="Download" />
             </button>
           </a>
         )}
