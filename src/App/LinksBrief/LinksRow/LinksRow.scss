@@ -1,14 +1,95 @@
+$line-height: 30px;
+$line-padding: 5px;
+$line-margin: 10px;
+$line-border: calc((#{$line-height} + 2 * #{$line-padding}) / 2);
+
 .links-row {
   display: flex;
   justify-content: space-between;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: $line-padding;
+  padding-bottom: $line-padding;
+  margin-top: $line-margin;
+  margin-bottom: $line-margin;
 
-  > :first-child {
+  border: solid 2px;
+  border-radius: $line-border;
+  padding-inline: $line-border;
+
+  &__label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin-right: 30px;
+
+    label {
+      font-size: $line-height;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    margin-right: 10px;
+
+    div, svg {
+      width: $line-height;
+      height: $line-height;
+    }
   }
 
   button {
     margin-left: 10px;
+    border: solid 1px;
+    border-radius: 10px;
+  }
+}
+
+$default-color: black;
+$github-color: #171515;
+$linkedin-color: #0e76a8;
+$pdf-color: #FF5722;
+
+.links-row-color {
+  &--default {
+    border-color: $default-color;
+    label {
+      color: $default-color;
+    }
+    svg {
+      fill: $default-color;
+    }
+  }
+
+  &--github {
+    border-color: $github-color;
+    label {
+      color: $github-color;
+    }
+    svg {
+      fill: $github-color;
+    }
+  }
+
+  &--linkedin {
+    border-color: $linkedin-color;
+    label {
+      color: $linkedin-color;
+    }
+    svg {
+      fill: $linkedin-color;
+    }
+  }
+
+  &--pdf {
+    border-color: $pdf-color;
+    label {
+      color: $pdf-color;
+    }
+    svg {
+      fill: $pdf-color;
+    }
   }
 }

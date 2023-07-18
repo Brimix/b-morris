@@ -1,4 +1,3 @@
-import {useCallback} from 'react';
 import LinksRow, {LinksRowProps} from './LinksRow';
 import './LinksBrief.scss';
 
@@ -8,14 +7,17 @@ import iconPdf from '../../../img/iconmonstr-file-34.svg';
 import resumePdf from '../../../files/Resume_Brian_Morris_Esquivel.pdf';
 
 const linksData: Array<LinksRowProps> = [{
+  color: 'github',
   icon: iconGithub,
   label: 'Check out my work',
   url: 'https://github.com/Brimix',
 }, {
+  color: 'linkedin',
   icon: iconLinkedin,
   label: 'Stalk me on Linkedin',
   url: 'https://www.linkedin.com/in/brian-morris-esquivel/',
 }, {
+  color: 'pdf',
   icon: iconPdf,
   label: 'Check my resume!',
   url: resumePdf,
