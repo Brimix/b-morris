@@ -5,7 +5,7 @@ const path = require('path');
 const APP_DIST_PATH = path.resolve(__dirname, './dist');
 
 module.exports = {
-  entry: ['babel-polyfill', './src/app.tsx'],
+  entry: ['babel-polyfill', './src/app'],
   output: {
     path: APP_DIST_PATH,
     filename: '[name].js',
