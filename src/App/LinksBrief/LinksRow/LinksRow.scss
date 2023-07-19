@@ -3,6 +3,8 @@ $line-padding: 5px;
 $line-margin: 10px;
 $line-border: calc((#{$line-height} + 2 * #{$line-padding}) / 2);
 
+$button-icon-height: 20px;
+
 .links-row {
   display: flex;
   justify-content: space-between;
@@ -19,7 +21,7 @@ $line-border: calc((#{$line-height} + 2 * #{$line-padding}) / 2);
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-right: 30px;
+    margin-right: 20px;
 
     label {
       font-size: $line-height;
@@ -40,21 +42,45 @@ $line-border: calc((#{$line-height} + 2 * #{$line-padding}) / 2);
     }
   }
 
-  button {
-    margin-left: 10px;
+  &__button {
+    display: flex;
+    flex-direction: column;
+    width: $line-height;
+    height: $line-height;
+    align-self: center;
+    justify-content: space-around;
+
     border: solid 1px;
-    border-radius: 10px;
+    border-radius: 15px;
+
+    a, svg {
+      width: $button-icon-height;
+      height: $button-icon-height;
+      display: block;
+      align-self: center;
+    }
   }
 }
 
-$default-color: black;
+$default-color: #000000;
+$default-color-t: #00000000;
 $github-color: #171515;
+$github-color-t: #17151530;
 $linkedin-color: #0e76a8;
-$pdf-color: #FF5722;
+$linkedin-color-t: #0e76a830;
+$pdf-color: #ff5722;
+$pdf-color-t: #ff572230;
 
 .links-row-color {
   &--default {
     border-color: $default-color;
+    :hover {
+      background-color: $default-color-t;
+      cursor: pointer;
+      * {
+        cursor: pointer;
+      }
+    }
     label {
       color: $default-color;
     }
@@ -65,6 +91,13 @@ $pdf-color: #FF5722;
 
   &--github {
     border-color: $github-color;
+    &:hover {
+      background-color: $github-color-t;
+      cursor: pointer;
+      * {
+        cursor: pointer;
+      }
+    }
     label {
       color: $github-color;
     }
@@ -75,6 +108,13 @@ $pdf-color: #FF5722;
 
   &--linkedin {
     border-color: $linkedin-color;
+    &:hover {
+      background-color: $linkedin-color-t;
+      cursor: pointer;
+      * {
+        cursor: pointer;
+      }
+    }
     label {
       color: $linkedin-color;
     }
@@ -85,6 +125,13 @@ $pdf-color: #FF5722;
 
   &--pdf {
     border-color: $pdf-color;
+    &:hover {
+      background-color: $pdf-color-t;
+      cursor: pointer;
+      * {
+        cursor: pointer;
+      }
+    }
     label {
       color: $pdf-color;
     }
