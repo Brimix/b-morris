@@ -1,3 +1,5 @@
+import {Dispatch} from 'react';
+
 export enum Language {
     ENGLISH = 'en',
     SPANISH = 'es',
@@ -10,3 +12,9 @@ export enum Phrase {
 }
 
 export type DictionaryLang = Record<Phrase, string>;
+
+export type LanguageContextInterface = {
+    language: Language;
+    setLanguage: Dispatch<Language>;
+    translate: (phrase: Phrase) => string;
+};

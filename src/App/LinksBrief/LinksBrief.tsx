@@ -5,7 +5,7 @@ import iconGithub from '../../../img/iconmonstr-github-1.svg';
 import iconLinkedin from '../../../img/iconmonstr-linkedin-3.svg';
 import iconPdf from '../../../img/iconmonstr-file-34.svg';
 import resumePdf from '../../../files/Resume_Brian_Morris_Esquivel.pdf';
-import { Phrase } from '../Translator';
+import {Phrase} from '../Language';
 
 const linksData: Array<LinksRowProps> = [{
   color: 'github',
