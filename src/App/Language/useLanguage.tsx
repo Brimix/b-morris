@@ -1,8 +1,8 @@
 import {useCallback, useState} from 'react';
-import {Language, LanguageContextInterface, Phrase} from './types';
+import {Language, LangContextInterface, Phrase} from './types';
 import {langMap} from './languages';
 
-const useLanguage = (): LanguageContextInterface => {
+const useLanguage = (): LangContextInterface => {
     const [language, setLanguage] = useState<Language> (Language.ENGLISH);
 
     const translate = useCallback((phrase: Phrase) => langMap[language][phrase], [language]);

@@ -1,6 +1,5 @@
 import {useCallback, useContext, useEffect, useMemo, useState} from 'react';
-import {LangContext} from '../Language';
-import {Language, Phrase} from '../Language/types';
+import {LangContext, Language, Phrase} from '../Language';
 
 const LanguageSwitcher = () => {
   const {language, setLanguage, translate} = useContext(LangContext);

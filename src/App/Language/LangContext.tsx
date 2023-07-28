@@ -1,7 +1,7 @@
 import {createContext} from 'react';
-import {Language, LanguageContextInterface, Phrase} from './types';
+import {Language, LangContextInterface, Phrase} from './types';
 
-const defaultLangContext: LanguageContextInterface = {
+const defaultLangContext: LangContextInterface = {
     language: Language.ENGLISH,
     setLanguage: function (value: Language): void {
         throw new Error('Function not implemented.');
@@ -11,6 +11,6 @@ const defaultLangContext: LanguageContextInterface = {
     }
 }
 
-const LangContext = createContext<LanguageContextInterface>(defaultLangContext);
+const LangContext = createContext<LangContextInterface>(defaultLangContext);
 
 export default LangContext;

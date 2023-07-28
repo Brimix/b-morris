@@ -1,4 +1,4 @@
-import {SyntheticEvent, useCallback, useContext, useEffect, useMemo, useReducer} from 'react';
+import {SyntheticEvent, useCallback, useContext, useMemo} from 'react';
 import {ReactSVG} from 'react-svg';
 import {LangContext, Phrase} from '../../Language';
 import './LinksRow.scss';

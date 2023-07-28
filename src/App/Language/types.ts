@@ -15,7 +15,7 @@ export enum Phrase {
 
 export type DictionaryLang = Record<Phrase, string>;
 
-export type LanguageContextInterface = {
+export type LangContextInterface = {
     language: Language;
     setLanguage: Dispatch<Language>;
     translate: (phrase: Phrase) => string;
