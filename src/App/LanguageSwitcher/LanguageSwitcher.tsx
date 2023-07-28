@@ -1,21 +1,27 @@
-import {useCallback, useContext, useState} from 'react';
+import {useCallback, useContext, useEffect, useMemo, useState} from 'react';
 import {LangContext} from '../Language';
-import {Language} from '../Language/types';
+import {Language, Phrase} from '../Language/types';
 
 const LanguageSwitcher = () => {
-  const [isSpanish, setIsSpanish] = useState<boolean>(false);
-  const {setLanguage} = useContext(LangContext);
+  const {language, setLanguage, translate} = useContext(LangContext);
+  const [languageIndex, setLanguageIndex] = useState<number>(0);
+  const languageList = useMemo(() => Object.values(Language), []);
 
-  const onClick = useCallback(() => {
-    const newSpanish = !isSpanish;
-    console.log("We should be speaking ", (newSpanish ? 'spanish!' : 'english!'));
-    setLanguage(newSpanish ? Language.SPANISH : Language.ENGLISH);
-    setIsSpanish(newSpanish);
-  }, [isSpanish]);
+  const shiftLanguage = useCallback(() => {
+    setLanguageIndex(
+      (prevIndex: number) => (prevIndex + 1) % languageList.length
+    );
+  }, [languageIndex]);
+
+  const label: string = useMemo(() => {
+    return `${translate(Phrase.CURRENT_LANGUAGE)}: ${language}`;
+  }, [translate, language]);
+
+  useEffect(() => setLanguage(languageList[languageIndex]), [languageIndex]);
 
   return (
     <div>
-      <button onClick={onClick}> Switch! </button>
+      <button onClick={shiftLanguage}> {label} </button>
     </div>
   );
 };

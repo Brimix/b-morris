@@ -1,11 +1,12 @@
+import {useContext} from 'react';
 import LinksRow, {LinksRowProps} from './LinksRow';
+import {LangContext, Phrase} from '../Language';
 import './LinksBrief.scss';
 
 import iconGithub from '../../../img/iconmonstr-github-1.svg';
 import iconLinkedin from '../../../img/iconmonstr-linkedin-3.svg';
 import iconPdf from '../../../img/iconmonstr-file-34.svg';
 import resumePdf from '../../../files/Resume_Brian_Morris_Esquivel.pdf';
-import {Phrase} from '../Language';
 
 const linksData: Array<LinksRowProps> = [{
   color: 'github',
@@ -26,9 +27,11 @@ const linksData: Array<LinksRowProps> = [{
 }];
 
 const LinksBrief = () => {
+  const {translate} = useContext(LangContext);
+
   return (
     <div className="links-brief">
-      <p> Site in development... </p>
+      <p> {translate(Phrase.SITE_IN_DEVELOPMENT)} </p>
       <div className="links-brief__wrapper">
         <div>
           {linksData.map((linkData, index) => (

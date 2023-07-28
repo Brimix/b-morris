@@ -6,6 +6,8 @@ export enum Language {
 }
 
 export enum Phrase {
+    SITE_IN_DEVELOPMENT,
+    CURRENT_LANGUAGE,
     GITHUB_LINK_MSG,
     LINKEDIN_LINK_MSG,
     RESUME_LINK_MSG,
