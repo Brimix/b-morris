@@ -5,6 +5,8 @@ export enum Language {
 
 export enum Phrase {
     GITHUB_LINK_MSG,
+    LINKEDIN_LINK_MSG,
+    RESUME_LINK_MSG,
 }
 
 export type DictionaryLang = Record<Phrase, string>;

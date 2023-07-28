@@ -1,5 +1,6 @@
 import {SyntheticEvent, useCallback, useMemo} from 'react';
 import {ReactSVG} from 'react-svg';
+import translator, {Phrase} from '../../Translator';
 import './LinksRow.scss';
 
 import iconDownload from '../../../../img/iconmonstr-download-4.svg';
@@ -7,7 +8,7 @@ import iconDownload from '../../../../img/iconmonstr-download-4.svg';
 export interface LinksRowProps {
   color?: string;
   icon: string;
-  label: string;
+  label: Phrase;
   url: string;
   downloadableFilename?: string;
 };
@@ -24,7 +25,7 @@ const LinksRow = (props: LinksRowProps) => {
     <div className={`links-row links-row-color--${color}`} onClick={onClick}>
       <div className="links-row__label">
         <ReactSVG className="links-row__icon" src={icon}/>
-        <label> {label} </label>
+        <label> {translator.translate(label)} </label>
       </div>
       {isDownloadable && (
         <div className={`links-row__button links-row-color--${color}`}>

@@ -5,21 +5,22 @@ import iconGithub from '../../../img/iconmonstr-github-1.svg';
 import iconLinkedin from '../../../img/iconmonstr-linkedin-3.svg';
 import iconPdf from '../../../img/iconmonstr-file-34.svg';
 import resumePdf from '../../../files/Resume_Brian_Morris_Esquivel.pdf';
+import { Phrase } from '../Translator';
 
 const linksData: Array<LinksRowProps> = [{
   color: 'github',
   icon: iconGithub,
-  label: 'Check out my work',
+  label: Phrase.GITHUB_LINK_MSG,
   url: 'https://github.com/Brimix',
 }, {
   color: 'linkedin',
   icon: iconLinkedin,
-  label: 'Stalk me on Linkedin',
+  label: Phrase.LINKEDIN_LINK_MSG,
   url: 'https://www.linkedin.com/in/brian-morris-esquivel/',
 }, {
   color: 'pdf',
   icon: iconPdf,
-  label: 'Check my resume!',
+  label: Phrase.RESUME_LINK_MSG,
   url: resumePdf,
   downloadableFilename: 'Resume - Brian Morris',
 }];
