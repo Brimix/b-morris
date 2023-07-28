@@ -3,9 +3,7 @@ import {Language, LangContextInterface, Phrase} from './types';
 
 const defaultLangContext: LangContextInterface = {
     language: Language.ENGLISH,
-    setLanguage: function (value: Language): void {
-        throw new Error('Function not implemented.');
-    },
+    setLanguage: () => {},
     translate: function (phrase: Phrase): string {
         throw new Error('Function not implemented.');
     }

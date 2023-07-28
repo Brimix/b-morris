@@ -10,11 +10,9 @@ const LanguageSwitcher = () => {
     setLanguageIndex(
       (prevIndex: number) => (prevIndex + 1) % languageList.length
     );
-  }, [languageIndex]);
+  }, []);
 
-  const label: string = useMemo(() => {
-    return `${translate(Phrase.CURRENT_LANGUAGE)}: ${language}`;
-  }, [translate, language]);
+  const label: string = useMemo(() => `${translate(Phrase.CURRENT_LANGUAGE)}: ${language}`, [translate, language]);
 
   useEffect(() => setLanguage(languageList[languageIndex]), [languageIndex]);
 
