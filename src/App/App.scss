@@ -66,6 +66,14 @@ html, body, #root {
     }
   }
 
+  &__lang-switch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    z-index: 2;
+  }
+
   &__footer {
     height: 30px;
     border-top: solid 1px black;
